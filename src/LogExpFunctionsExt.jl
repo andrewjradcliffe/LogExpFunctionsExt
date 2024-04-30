@@ -1,6 +1,7 @@
 module LogExpFunctionsExt
 
-using LogExpFunctions
+import LogExpFunctions
+import LogExpFunctions: log1pexp, log1mexp
 
 export loglogistic, logitexp, log1mlogistic, logit1mexp
 
@@ -19,7 +20,7 @@ carefully and with fewer calls than than the composition
 Its inverse is the [`logitexp`](@ref) function.
 """
 loglogistic(x::AbstractFloat) = -log1pexp(-x) #
-loglogistic(x::T) where {T<:Real} = -log1pexp(-convert(Base.promote_type(Float64, T), x))
+loglogistic(x::T) where {T<:Real} = -log1pexp(-convert(promote_type(Float64, T), x))
 
 #=
 this uses the identity:
