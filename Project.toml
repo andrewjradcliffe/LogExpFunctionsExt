@@ -1,10 +1,11 @@
 name = "LogExpFunctionsExt"
 uuid = "1d3c57f4-a782-4852-bc37-7abded456395"
 authors = ["Andrew Radcliffe <andrewjradcliffe@gmail.com>"]
-version = "0.1.0"
+version = "0.0.1"
 
 [deps]
 LogExpFunctions = "2ab3a3ac-af41-5b50-aa03-7779005ae688"
 
 [compat]
+julia = "1.5"
 LogExpFunctions = "0.3.27"
